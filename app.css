@@ -6,8 +6,8 @@
                T=Teal, I=Info, A=Accent, l=light bg version
 ══════════════════════════════════════════════════════════════════════ */
     :root {
-      /* ── Prompt-inspired design system + Joolry brand ── */
-      /* Primary: deep ink (Joolry) with soft blue interactive accent */
+      /* ── Prompt-inspired design system + Fresko brand ── */
+      /* Primary: deep ink (Fresko) with soft blue interactive accent */
       --P: #1E293B;
       --Pd: #0F172A;
       --Pl: rgba(30, 41, 59, .08);
@@ -7946,7 +7946,7 @@
 
     /* ── reduce-motion: kill all animations ── */
     /* ════════════════════════════════════════════════════════════════════════
-       RESPONSIVE OVERHAUL v2 — Joolry Daily
+       RESPONSIVE OVERHAUL v2 — Fresko Daily
        Three breakpoints:
          Desktop  : > 1024px  — default styles
          Tablet   : 641-1024px — already handled above
@@ -8286,7 +8286,7 @@
     }
 
     /* ══════════════════════════════════════════════════════════════════════
-       ANIMATION SYSTEM v2 — Joolry Daily
+       ANIMATION SYSTEM v2 — Fresko Daily
        Principles: spring physics, stagger, purpose-driven motion
     ══════════════════════════════════════════════════════════════════════ */
 
@@ -10873,7 +10873,7 @@
 
 
     /* ══════════════════════════════════════════════════════════════════════
-       MOBILE BOTTOM NAV — ISE-style, Joolry brand colors
+       MOBILE BOTTOM NAV — ISE-style, Fresko brand colors
     ══════════════════════════════════════════════════════════════════════ */
     .mob-nav {
       display: none;
@@ -11428,7 +11428,7 @@
     }
   
 /* ═══════════════════════════════════════════════════════════════════════════
-   JOOLRY DAILY — DEFINITIVE RESPONSIVE + RICH UI LAYER (v1.2)
+   Fresko DAILY — DEFINITIVE RESPONSIVE + RICH UI LAYER (v1.2)
    Loads last → wins over older rules. Devices: phone / tablet / desktop
 ═══════════════════════════════════════════════════════════════════════════ */
 
@@ -11992,7 +11992,7 @@
 
 
 /* ═══════════════════════════════════════════════════════════════════════════
-   JOOLRY MOBILE — ALL VIEWS ALIGNED (Uizard-style + luxury brand)
+   Fresko MOBILE — ALL VIEWS ALIGNED (Uizard-style + luxury brand)
    Scope: ≤767px — every module, list, form, modal, table
 ═══════════════════════════════════════════════════════════════════════════ */
 @media (max-width: 767px) {
@@ -12263,7 +12263,7 @@
     border-radius: 14px !important;
   }
 
-  /* ── Joolry accent on primary CTAs ── */
+  /* ── Fresko accent on primary CTAs ── */
   .btn:not(.btn-outline):not(.btn-ghost):not(.l-btn) {
     background: var(--j-ink) !important;
     color: #fff !important;
@@ -12878,9 +12878,9 @@
     right: 0 !important;
     bottom: 0 !important;
     transform: none !important;
-    animation: joolryModalUp .28s cubic-bezier(0.34, 1.2, 0.64, 1) !important;
+    animation: FreskoModalUp .28s cubic-bezier(0.34, 1.2, 0.64, 1) !important;
   }
-  @keyframes joolryModalUp {
+  @keyframes FreskoModalUp {
     from { opacity: 0; transform: translateY(40px); }
     to   { opacity: 1; transform: translateY(0); }
   }
@@ -13631,8 +13631,8 @@
 
 
 /* ════════════════════════════════════════════════════════════════════════════
-   JOOLRY DAILY — PREMIUM NATIVE APP LAYER  (v21)
-   Brand: joolry.in  ·  Ink #111111 · Silver-white · Rose-gold #B76E79
+   Fresko DAILY — PREMIUM NATIVE APP LAYER  (v21)
+   Brand: Fresko.in  ·  Ink #111111 · Silver-white · Rose-gold #B76E79
    Targets iOS + Android (PWA / mobile browser). Desktop layout untouched;
    only brand colours/typography carry over. Keep this block LAST in the file.
 ════════════════════════════════════════════════════════════════════════════ */
@@ -13754,7 +13754,7 @@ input, textarea, select { -webkit-user-select: text; user-select: text; }
   .nv-section-label { font-size: 11px; letter-spacing: .08em; color: var(--tx3) !important; }
   .mob-ov, .sb-overlay { -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); background: rgba(17,17,17,.42) !important; }
 
-  /* Floating glass tab bar (ink, like the joolry.in header) */
+  /* Floating glass tab bar (ink, like the Fresko.in header) */
   .mob-nav {
     left: 14px !important; right: 14px !important; bottom: calc(12px + var(--safe-b)) !important;
     padding: 0 !important; border: 0 !important; border-radius: 30px !important;
@@ -14162,7 +14162,7 @@ input, textarea, select { -webkit-user-select: text; user-select: text; }
 
 /* ════════════════════════════════════════════════════════════════════════════
    v4 — "SILVER & ROSE-GOLD" AIRY APP LOOK  (light canvas, white soft cards,
-   pastel chips, transparent header, raised centre button — Joolry palette)
+   pastel chips, transparent header, raised centre button — Fresko palette)
 ════════════════════════════════════════════════════════════════════════════ */
 :root {
   --bg: #F5F5F7;  --sur: #FFFFFF;  --sur2: #F8F8FA;  --sur3: #EFEFF3;
@@ -14478,7 +14478,7 @@ input, textarea, select { -webkit-user-select: text; user-select: text; }
   }
 }
 
-/* ═══════════════ END JOOLRY NATIVE APP LAYER ═══════════════ */
+/* ═══════════════ END Fresko NATIVE APP LAYER ═══════════════ */
 
 /* ════════════════════════════════════════════════════════════════════════════
    NUCLEAR MOBILE FIX v7 — sidebar ABOVE overlay (no grey wash)
