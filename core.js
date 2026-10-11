@@ -5,14 +5,14 @@
     var _U = null;   // Current logged-in user object from GAS
 
     // ── Session persistence helpers ───────────────────────────────────────────
-    var _SESSION_KEY = 'joolry_session_v1';
+    var _SESSION_KEY = 'Fresko_session_v1';
     // Uses localStorage so session survives page refresh AND tab close
     // Expiry enforced client-side; sign-out always clears it
     function _saveSession(user, token) {
       try {
         var sessionHours = 12;
         try {
-          var sh = parseInt(localStorage.getItem('joolry_session_hours') || '');
+          var sh = parseInt(localStorage.getItem('Fresko_session_hours') || '');
           if (!isNaN(sh) && sh > 0) sessionHours = sh;
         } catch (e) { }
         var exp = Date.now() + sessionHours * 3600 * 1000;
@@ -888,7 +888,7 @@
       try {
         var sbNm = document.getElementById('sbName');
         var sbRl = document.getElementById('sbRole');
-        var nm = (_U && _U.name && _U.name !== 'User' && _U.name !== 'Staff' && _U.name.trim() !== '') ? _U.name : (sbNm && sbNm.textContent && sbNm.textContent !== 'Joolry Staff' ? sbNm.textContent : '');
+        var nm = (_U && _U.name && _U.name !== 'User' && _U.name !== 'Staff' && _U.name.trim() !== '') ? _U.name : (sbNm && sbNm.textContent && sbNm.textContent !== 'Fresko Staff' ? sbNm.textContent : '');
         var rl = (_U && _U.role) ? (_U.role + ' · ' + (_U.dept || '')) : (sbRl && sbRl.textContent ? sbRl.textContent : 'Staff');
         if (!nm || nm.trim() === '') nm = 'Staff Member';
         var n = document.getElementById('soUserName'), r = document.getElementById('soUserDept');
@@ -906,7 +906,7 @@
       document.body.style.overflow = '';
     }
     function _signOut() {
-      try {_rcClear(true); _clearSession(); localStorage.removeItem('joolry_session_v1'); sessionStorage.clear();} catch (e) { }
+      try {_rcClear(true); _clearSession(); localStorage.removeItem('Fresko_session_v1'); sessionStorage.clear();} catch (e) { }
       _U = null; _TOKEN = null;
       window._fkLoaded = false;
       document.documentElement.classList.remove('has-session');
@@ -933,7 +933,7 @@
       // Reset sidebar to defaults for next login
       try {
         var sbn = document.getElementById('sbName'), sbr = document.getElementById('sbRole'), sbi = document.getElementById('sbAvaInitials');
-        if (sbn) sbn.textContent = 'Joolry Staff'; if (sbr) sbr.textContent = 'Staff'; if (sbi) sbi.textContent = '?';
+        if (sbn) sbn.textContent = 'Fresko Staff'; if (sbr) sbr.textContent = 'Staff'; if (sbi) sbi.textContent = '?';
       } catch (e) { }
       setTimeout(function () {
         var em = document.getElementById('femail'), pw = document.getElementById('fpass'), er = document.getElementById('loginErr');
@@ -1138,7 +1138,7 @@
       }).then(function (r) {return r.json();}).then(function (data) {
         clearTimeout(tm); _lbHide();
         if (data && data.error === 'NOT_AUTHENTICATED') {
-          try {localStorage.removeItem('joolry_session_v1');} catch (e) { }
+          try {localStorage.removeItem('Fresko_session_v1');} catch (e) { }
           location.reload(); return;
         }
         if (data && data.success === false && data.error) {
@@ -1474,7 +1474,7 @@
 
       window._fkSplashHardTimer = setTimeout(function () {
         if (window._fkLoaded) return;
-        console.warn('[Joolry] Splash hard-timeout 32s — forcing retry UI');
+        console.warn('[Fresko] Splash hard-timeout 32s — forcing retry UI');
         window._fkBootFailed = true;          // soft tip ko block karo
         if (window._fkTipTimer) {clearInterval(window._fkTipTimer); window._fkTipTimer = null;}
 
@@ -1580,7 +1580,7 @@
           _D.appConfig = d.appConfig;
           if (d.appConfig.SESSION_HOURS) {
             try {
-              localStorage.setItem('joolry_session_hours', String(parseInt(d.appConfig.SESSION_HOURS, 10) || 12));
+              localStorage.setItem('Fresko_session_hours', String(parseInt(d.appConfig.SESSION_HOURS, 10) || 12));
             } catch (e) { }
           }
           if (_U && _TOKEN) _saveSession(_U, _TOKEN);
@@ -1670,7 +1670,7 @@
         _D.appConfig = cfg;
         if (cfg.SESSION_HOURS) {
           try {
-            localStorage.setItem('joolry_session_hours', String(parseInt(cfg.SESSION_HOURS, 10) || 12));
+            localStorage.setItem('Fresko_session_hours', String(parseInt(cfg.SESSION_HOURS, 10) || 12));
           } catch (e) { }
         }
         if (_U && _TOKEN) _saveSession(_U, _TOKEN);
@@ -7215,7 +7215,7 @@
 
         '</div>' +
         '<div style="padding:14px 20px;border-top:1px solid var(--bdr)">' +
-        '<div style="font-size:10px;color:var(--tx3);font-weight:600">Joolry Daily &nbsp;·&nbsp; &copy; 2026 Joolry</div>' +
+        '<div style="font-size:10px;color:var(--tx3);font-weight:600">Fresko Daily &nbsp;·&nbsp; &copy; 2026 Fresko</div>' +
         '</div>';
 
       document.body.appendChild(panel);
@@ -8164,7 +8164,7 @@
        Stored in localStorage so they only show once
     ══════════════════════════════════════════════════════════ */
     var _tips = [
-      {id: 't1', title: 'Welcome to Joolry Daily!', body: 'Use the sidebar to navigate between modules. Your current section is highlighted.', ico: 'fa-hand-wave'},
+      {id: 't1', title: 'Welcome to Fresko Daily!', body: 'Use the sidebar to navigate between modules. Your current section is highlighted.', ico: 'fa-hand-wave'},
       {id: 't2', title: 'Quick Search', body: 'Press ⌘K (Mac) or Ctrl+K (Windows) to open the global search and jump to any page or employee instantly.', ico: 'fa-magnifying-glass'},
       {id: 't3', title: 'Keyboard Shortcuts', body: 'Press ? anywhere in the app to see all available keyboard shortcuts.', ico: 'fa-keyboard'},
       {id: 't4', title: 'Dark Mode', body: 'Toggle dark mode using the moon icon in the top right corner. Your preference is saved automatically.', ico: 'fa-moon'}
@@ -8210,8 +8210,8 @@
       // Show first onboarding tip 2 seconds after login (triggered from _bootApp)
       // _showNextTip is called from _bootApp after login
 
-      console.log('[Joolry Daily v3.0] Initialized. Ready for login.');
-      console.log('[Joolry Daily v3.0] Press ? for keyboard shortcuts, ⌘K for search.');
+      console.log('[Fresko Daily v3.0] Initialized. Ready for login.');
+      console.log('[Fresko Daily v3.0] Press ? for keyboard shortcuts, ⌘K for search.');
     }());
 
     /* ══════════════════════════════════════════════════════════════════════
@@ -11135,7 +11135,7 @@
         var sbRl = document.getElementById('sbRole');
         var nm = (u.name && String(u.name).trim() && u.name !== 'User' && u.name !== 'Staff')
           ? u.name
-          : (sbNm && sbNm.textContent && sbNm.textContent.trim() && sbNm.textContent !== 'Joolry Staff' ? sbNm.textContent.trim() : '');
+          : (sbNm && sbNm.textContent && sbNm.textContent.trim() && sbNm.textContent !== 'Fresko Staff' ? sbNm.textContent.trim() : '');
         if (!nm) nm = (u.email || 'Staff Member');
         var role = (u.role || 'STAFF');
         var dept = (u.dept || '');
@@ -12136,9 +12136,9 @@
         document.body.classList.add('dense');
       }
 
-      console.log('[Joolry Daily v3.0] Initialized. Ready for login.');
-      console.log('[Joolry Daily v3.0] Press ? for keyboard shortcuts, ⌘K for search.');
-      console.log('[Joolry Daily v3.0] Navigation routes:', _navRoutes.length, 'views registered.');
+      console.log('[Fresko Daily v3.0] Initialized. Ready for login.');
+      console.log('[Fresko Daily v3.0] Press ? for keyboard shortcuts, ⌘K for search.');
+      console.log('[Fresko Daily v3.0] Navigation routes:', _navRoutes.length, 'views registered.');
     }());
 
     /* ══════════════════════════════════════════════════════════════════════
