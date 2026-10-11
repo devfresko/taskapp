@@ -1453,7 +1453,7 @@
               '<div style="position:relative;width:88px;height:88px;margin-bottom:22px">' +
               '<div style="position:absolute;inset:0;border-radius:50%;background:#fff;box-shadow:0 4px 20px rgba(0,0,0,.12)"></div>' +
               '<div style="position:absolute;inset:-5px;border-radius:50%;border:3.5px solid transparent;border-top-color:#111111;border-right-color:#B76E79;animation:fkLogoSpin .9s linear infinite"></div>' +
-              '<img src="https://joolry.in/cdn/shop/files/Joolry_Logo_160x.png?v=1661766461" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;padding:13px;border-radius:50%" onerror="this.style.display=\'none\'">' +
+              '<img src="https://fresko.co.in/wp-content/uploads/2025/08/Untitled-design-21.png" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;padding:13px;border-radius:50%" onerror="this.style.display=\'none\'">' +
               '</div>' +
               '<div style="font-size:16px;font-weight:800;color:var(--tx);margin-bottom:6px">Loading your workspace...</div>' +
               '<div id="_fkTip" style="font-size:13px;color:var(--tx2);min-height:18px;transition:opacity .3s;padding:0 16px;line-height:1.5">' + tips[0] + '</div>' +
