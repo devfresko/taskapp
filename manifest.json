@@ -1,7 +1,7 @@
 {
-  "name": "Joolry Daily",
-  "short_name": "Joolry",
-  "description": "Joolry Daily — Attendance, Tasks, Delegation & Analytics",
+  "name": "Fresko Daily",
+  "short_name": "Fresko",
+  "description": "Fresko Daily — Attendance, Tasks, Delegation & Analytics",
   "start_url": "./index.html?pwa=1",
   "display": "standalone",
   "orientation": "portrait-primary",
