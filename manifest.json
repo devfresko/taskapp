@@ -1,7 +1,7 @@
 {
-  "name": "Fresko Daily",
+  "name": "Fresko TaskApp",
   "short_name": "Fresko",
-  "description": "Fresko Daily — Attendance, Tasks, Delegation & Analytics",
+  "description": "Fresko TaskApp — Attendance, Tasks, Delegation & Analytics",
   "start_url": "./index.html?pwa=1",
   "display": "standalone",
   "orientation": "portrait-primary",
