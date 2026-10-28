@@ -98,6 +98,47 @@
     }
 
 
+.l-title {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -0.3px;
+  margin: 0 0 4px;
+  color: var(--tx);
+}
+.l-sub {
+  text-align: center;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--tx3);
+  margin: 0 0 28px;
+  letter-spacing: 0;
+}
+.l-footer {
+  text-align: center;
+  font-size: 11px;
+  color: var(--tx3);
+  margin-top: 20px;
+  opacity: 0.7;
+}
+.l-mob-brand {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.l-mob-logo {
+  background: #fff;
+  border-radius: 16px;
+  padding: 10px 18px;
+  display: inline-flex;
+  box-shadow: 0 4px 20px rgba(0,0,0,.15);
+}
+.l-mob-logo img {
+  width: 90px;
+  height: 40px;
+  object-fit: contain;
+  display: block;
+}
+
     /* ══════════════════════════════════════════════════════════════════════
        PROMPT-STYLE COMPONENT LAYER (alignment + surfaces)
     ══════════════════════════════════════════════════════════════════════ */
@@ -12878,9 +12919,9 @@
     right: 0 !important;
     bottom: 0 !important;
     transform: none !important;
-    animation: FreskoModalUp .28s cubic-bezier(0.34, 1.2, 0.64, 1) !important;
+    animation: freskoModalUp .28s cubic-bezier(0.34, 1.2, 0.64, 1) !important;
   }
-  @keyframes FreskoModalUp {
+  @keyframes freskoModalUp {
     from { opacity: 0; transform: translateY(40px); }
     to   { opacity: 1; transform: translateY(0); }
   }
@@ -13631,8 +13672,8 @@
 
 
 /* ════════════════════════════════════════════════════════════════════════════
-   Fresko DAILY — PREMIUM NATIVE APP LAYER  (v21)
-   Brand: Fresko.in  ·  Ink #111111 · Silver-white · Rose-gold #B76E79
+   Frekso DAILY — PREMIUM NATIVE APP LAYER  (v21)
+   Brand: fresko.co.in  ·  Ink #111111 · Silver-white · Rose-gold #B76E79
    Targets iOS + Android (PWA / mobile browser). Desktop layout untouched;
    only brand colours/typography carry over. Keep this block LAST in the file.
 ════════════════════════════════════════════════════════════════════════════ */
@@ -13754,7 +13795,7 @@ input, textarea, select { -webkit-user-select: text; user-select: text; }
   .nv-section-label { font-size: 11px; letter-spacing: .08em; color: var(--tx3) !important; }
   .mob-ov, .sb-overlay { -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); background: rgba(17,17,17,.42) !important; }
 
-  /* Floating glass tab bar (ink, like the Fresko.in header) */
+  /* Floating glass tab bar (ink, like the fresko.co.in header) */
   .mob-nav {
     left: 14px !important; right: 14px !important; bottom: calc(12px + var(--safe-b)) !important;
     padding: 0 !important; border: 0 !important; border-radius: 30px !important;
